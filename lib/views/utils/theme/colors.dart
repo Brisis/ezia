@@ -8,6 +8,7 @@ abstract class CustomColors {
   static Color kBorderColor = const Color(0xFFB9BFC8);
   static Color kContainerBackgroundColor = const Color(0xFFE9EBEE);
   static Color kSuccessColor = const Color(0xFF129E68);
+  static Color kWarningColor = Colors.red;
 
   static Color kBoldTextColor = const Color(0xFF21262E);
   static Color kLightTextColor = const Color(0xFF505965);

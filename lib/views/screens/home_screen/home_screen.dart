@@ -38,31 +38,34 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          "e-ZiA",
-                          style: Theme.of(context)
-                              .textTheme
-                              .displayLarge!
-                              .copyWith(
-                                color: CustomColors.kWhiteTextColor,
-                                fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                        CustomSpaces.verticalSpace(height: 15.h),
-                        Text(
-                          "A single portal to all government services",
-                          style:
-                              Theme.of(context).textTheme.bodySmall!.copyWith(
-                                    color: CustomColors.kWhiteTextColor,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 15.w),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "e-ZiA",
+                            style: Theme.of(context)
+                                .textTheme
+                                .displayLarge!
+                                .copyWith(
+                                  color: CustomColors.kWhiteTextColor,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                          ),
+                          CustomSpaces.verticalSpace(height: 15.h),
+                          Text(
+                            "Embrace your digital identity using a verified portal to all government services",
+                            style:
+                                Theme.of(context).textTheme.bodySmall!.copyWith(
+                                      color: CustomColors.kWhiteTextColor,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Positioned(

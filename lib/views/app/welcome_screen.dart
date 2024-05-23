@@ -4,6 +4,7 @@ import 'package:ecity/views/utils/theme/spaces.dart';
 import 'package:ecity/views/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -56,17 +57,25 @@ class WelcomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Text(
+                  //   "We are connecting every citizen of zimbabwe to a broad list of verified services, information & businesses through e-ZiA",
+                  //   style: Theme.of(context).textTheme.headlineSmall,
+                  // ),
+                  Center(
+                    child: Image.asset(
+                      "assets/images/di.png",
+                      width: 80.w,
+                      height: 80.h,
+                    ),
+                  ),
+                  CustomSpaces.verticalSpace(),
                   Text(
                     "Electronic Zimbabwean Access",
                     style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           color: CustomColors.kBoldTextColor,
                           fontWeight: FontWeight.bold,
                         ),
-                  ),
-                  CustomSpaces.verticalSpace(),
-                  Text(
-                    "We are connecting every citizen of zimbabwe to a broad list of verified services, information & businesses through e-ZiA",
-                    style: Theme.of(context).textTheme.headlineSmall,
+                    textAlign: TextAlign.center,
                   ),
                   CustomSpaces.verticalSpace(height: 30),
                   ButtonWidget(

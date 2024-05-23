@@ -53,13 +53,20 @@ class WelcomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Together we can make a better Zimbabwe",
-                    style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                    "Electronic Zimbabwean Access",
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           color: CustomColors.kBoldTextColor,
                           fontWeight: FontWeight.bold,
                         ),
+                  ),
+                  CustomSpaces.verticalSpace(),
+                  Text(
+                    "We are connecting every citizen of zimbabwe to a broad list of verified services, information & businesses through e-ZiA",
+                    style: Theme.of(context).textTheme.headlineSmall,
                   ),
                   CustomSpaces.verticalSpace(height: 30),
                   ButtonWidget(

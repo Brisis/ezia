@@ -1,3 +1,6 @@
+import 'package:ecity/views/screens/home_screen/widgets/business_card.dart';
+import 'package:ecity/views/screens/home_screen/widgets/emergency_service_card.dart';
+import 'package:ecity/views/screens/home_screen/widgets/news_card.dart';
 import 'package:ecity/views/screens/home_screen/widgets/service_lg_card.dart';
 import 'package:ecity/views/screens/home_screen/widgets/service_sm_card.dart';
 import 'package:ecity/views/utils/theme/colors.dart';
@@ -153,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
               thickness: 8.0.h,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15.0.w),
+              padding: EdgeInsets.symmetric(horizontal: 15.0.w, vertical: 8.h),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -207,7 +210,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: Icons.attach_money,
                     onTap: () {},
                   ),
-                  CustomSpaces.verticalSpace(),
                 ],
               ),
             ),
@@ -216,7 +218,7 @@ class _HomeScreenState extends State<HomeScreen> {
               thickness: 8.0.h,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15.0.w),
+              padding: EdgeInsets.symmetric(horizontal: 15.0.w, vertical: 8.h),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -244,15 +246,29 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   CustomSpaces.verticalSpace(),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 250.h,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: List.generate(
+                        4,
+                        (index) => Padding(
+                          padding: EdgeInsets.only(right: 8.0.w),
+                          child: const NewsCard(),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
             Divider(
               color: CustomColors.kContainerBackgroundColor,
-              thickness: 8.0,
+              thickness: 8.0.h,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15.0.w),
+              padding: EdgeInsets.symmetric(horizontal: 15.0.w, vertical: 8.h),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -262,7 +278,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Business",
+                        "Emergency",
                         style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                               fontWeight: FontWeight.bold,
                             ),
@@ -280,6 +296,82 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   CustomSpaces.verticalSpace(),
+                  EmergencyServiceCard(
+                    title: "Ambulance",
+                    subTitle: "994",
+                    icon: Icons.emergency,
+                    onTap: () {},
+                  ),
+                  Divider(
+                    color: CustomColors.kContainerBackgroundColor,
+                    thickness: 1.5.h,
+                  ),
+                  EmergencyServiceCard(
+                    title: "Police",
+                    subTitle: "112",
+                    icon: Icons.local_police,
+                    onTap: () {},
+                  ),
+                  Divider(
+                    color: CustomColors.kContainerBackgroundColor,
+                    thickness: 1.5.h,
+                  ),
+                  EmergencyServiceCard(
+                    title: "Child Welfare",
+                    subTitle: "012",
+                    icon: Icons.child_care,
+                    onTap: () {},
+                  ),
+                ],
+              ),
+            ),
+            Divider(
+              color: CustomColors.kContainerBackgroundColor,
+              thickness: 8.0,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15.0.w, vertical: 8.h),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Businesses",
+                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "See all",
+                          style:
+                              Theme.of(context).textTheme.bodySmall!.copyWith(
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  CustomSpaces.verticalSpace(),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 250.h,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: List.generate(
+                        4,
+                        (index) => Padding(
+                          padding: EdgeInsets.only(right: 8.0.w),
+                          child: const BusinessCard(),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

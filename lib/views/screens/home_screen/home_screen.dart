@@ -3,6 +3,7 @@ import 'package:ecity/views/screens/home_screen/widgets/service_sm_card.dart';
 import 'package:ecity/views/utils/theme/colors.dart';
 import 'package:ecity/views/utils/theme/spaces.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -51,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontWeight: FontWeight.bold,
                               ),
                         ),
-                        CustomSpaces.verticalSpace(height: 15),
+                        CustomSpaces.verticalSpace(height: 15.h),
                         Text(
                           "A single portal to all government services",
                           style:
@@ -88,8 +89,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                width: 25,
-                                height: 1.5,
+                                width: 25.w,
+                                height: 1.5.h,
                                 color: CustomColors.kBorderColor,
                               ),
                               CustomSpaces.horizontalSpace(),
@@ -104,8 +105,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               CustomSpaces.horizontalSpace(),
                               Container(
-                                width: 25,
-                                height: 1.5,
+                                width: 25.w,
+                                height: 1.5.h,
                                 color: CustomColors.kBorderColor,
                               ),
                             ],
@@ -146,10 +147,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Divider(
               color: CustomColors.kContainerBackgroundColor,
-              thickness: 8.0,
+              thickness: 8.0.h,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              padding: EdgeInsets.symmetric(horizontal: 15.0.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -185,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Divider(
                     color: CustomColors.kContainerBackgroundColor,
-                    thickness: 1.5,
+                    thickness: 1.5.h,
                   ),
                   ServiceLgCard(
                     title: "Zinwa",
@@ -195,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Divider(
                     color: CustomColors.kContainerBackgroundColor,
-                    thickness: 1.5,
+                    thickness: 1.5.h,
                   ),
                   ServiceLgCard(
                     title: "Zimra",
@@ -203,19 +204,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: Icons.attach_money,
                     onTap: () {},
                   ),
-                  Divider(
-                    color: CustomColors.kContainerBackgroundColor,
-                    thickness: 1.5,
-                  ),
+                  CustomSpaces.verticalSpace(),
                 ],
               ),
             ),
             Divider(
               color: CustomColors.kContainerBackgroundColor,
-              thickness: 8.0,
+              thickness: 8.0.h,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              padding: EdgeInsets.symmetric(horizontal: 15.0.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -251,7 +249,7 @@ class _HomeScreenState extends State<HomeScreen> {
               thickness: 8.0,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              padding: EdgeInsets.symmetric(horizontal: 15.0.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,

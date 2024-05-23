@@ -1,6 +1,7 @@
 import 'package:ecity/views/utils/theme/colors.dart';
 import 'package:ecity/views/utils/theme/spaces.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ServiceLgCard extends StatelessWidget {
   final IconData icon;
@@ -21,17 +22,17 @@ class ServiceLgCard extends StatelessWidget {
       onTap: onTap,
       contentPadding: EdgeInsets.zero,
       leading: Container(
-        height: 80,
-        width: 60,
+        height: 80.h,
+        width: 60.w,
         decoration: BoxDecoration(
           color: CustomColors.kContainerBackgroundColor,
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(8.r),
         ),
         child: Center(
           child: Icon(
             icon,
             color: CustomColors.kDarkSurfaceColor,
-            size: 32,
+            size: 32.sp,
           ),
         ),
       ),
@@ -41,7 +42,8 @@ class ServiceLgCard extends StatelessWidget {
         children: [
           Text(
             title,
-            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: CustomColors.kBoldTextColor,
                   fontWeight: FontWeight.w600,
                 ),
           ),
@@ -55,7 +57,7 @@ class ServiceLgCard extends StatelessWidget {
       trailing: Icon(
         Icons.arrow_forward_ios,
         color: CustomColors.kIconColor,
-        size: 28,
+        size: 28.sp,
       ),
     );
   }

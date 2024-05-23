@@ -1,33 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:ecity/views/utils/theme/colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 abstract class CustomTypography {
   static TextTheme textTheme = TextTheme(
     bodySmall: TextStyle(
-      fontSize: 15,
+      fontSize: 12.sp,
       fontWeight: FontWeight.w500,
       color: CustomColors.kMediumTextColor,
     ),
     bodyMedium: TextStyle(
-      fontSize: 17,
+      fontSize: 14.sp,
       fontWeight: FontWeight.normal,
       color: CustomColors.kLightTextColor,
     ),
-    bodyLarge: const TextStyle(
-      fontSize: 19,
+    bodyLarge: TextStyle(
+      fontSize: 16.sp,
       fontWeight: FontWeight.bold,
     ),
-    labelSmall: const TextStyle(fontSize: 8),
-    labelMedium: const TextStyle(fontSize: 10),
-    labelLarge: const TextStyle(fontSize: 12),
-    displaySmall: const TextStyle(fontSize: 16),
-    displayMedium: const TextStyle(
-      fontSize: 18,
+    labelSmall: TextStyle(fontSize: 8.sp),
+    labelMedium: TextStyle(fontSize: 10.sp),
+    labelLarge: TextStyle(fontSize: 12.sp),
+    displaySmall: TextStyle(fontSize: 14.sp),
+    displayMedium: TextStyle(
+      fontSize: 16.sp,
       fontWeight: FontWeight.bold,
     ),
     displayLarge: TextStyle(
-      fontSize: 28,
+      fontSize: 24.sp,
       fontWeight: FontWeight.bold,
+      color: CustomColors.kBoldTextColor,
+    ),
+    headlineSmall: TextStyle(fontSize: 18.sp),
+    headlineMedium: TextStyle(
+      fontSize: 24.sp,
+      fontWeight: FontWeight.bold,
+    ),
+    headlineLarge: TextStyle(
+      fontSize: 36.sp,
       color: CustomColors.kBoldTextColor,
     ),
   );

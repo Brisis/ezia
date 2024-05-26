@@ -1,3 +1,4 @@
+import 'package:ecity/views/screens/services_screen/service_screen.dart';
 import 'package:ecity/views/screens/services_screen/widgets/service_card.dart';
 import 'package:ecity/views/utils/theme/colors.dart';
 import 'package:ecity/views/utils/theme/spaces.dart';
@@ -14,36 +15,12 @@ class ServicesScreen extends StatelessWidget {
           backgroundColor: CustomColors.kBackgroundColor,
           elevation: 0.5,
           automaticallyImplyLeading: false,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              CircleAvatar(
-                backgroundColor: CustomColors.kContainerBackgroundColor,
-                backgroundImage: const AssetImage("assets/images/woman.jpg"),
-                maxRadius: 20.r,
-              ),
-              CustomSpaces.horizontalSpace(),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Explore your services",
-                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                          fontWeight: FontWeight.w600,
-                        ),
-                  ),
-                  Text(
-                    "Maria Nyamutanda",
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: CustomColors.kBoldTextColor,
-                          fontWeight: FontWeight.w600,
-                        ),
-                  ),
-                ],
-              ),
-            ],
+          title: Text(
+            "Explore your Services",
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: CustomColors.kBoldTextColor,
+                  fontWeight: FontWeight.bold,
+                ),
           ),
         ),
         bottomSheet: Padding(
@@ -117,7 +94,9 @@ class ServicesScreen extends StatelessWidget {
                   (index) => ServiceCard(
                     title: services[index].title,
                     icon: services[index].icon,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context, ServiceScreen.route());
+                    },
                   ),
                 ),
               ),
@@ -130,28 +109,28 @@ class ServicesScreen extends StatelessWidget {
 
 List<Service> services = const [
   Service(
-    title: "Zesa",
+    title: "ZETDC",
     icon: Icons.electric_bolt,
   ),
   Service(
-    title: "Zinwa",
+    title: "ZINWA",
     icon: Icons.water_drop,
   ),
   Service(
-    title: "Zimra",
+    title: "ZIMRA",
     icon: Icons.attach_money,
   ),
   Service(
-    title: "Zinara",
+    title: "ZINARA",
     icon: Icons.local_taxi_sharp,
   ),
   Service(
-    title: "Mohcc",
+    title: "MOHCC",
     icon: Icons.health_and_safety,
   ),
   Service(
-    title: "Births & Death",
-    icon: Icons.edit_document,
+    title: "MoPSE",
+    icon: Icons.school,
   ),
   Service(
     title: "ZRP",
@@ -162,8 +141,8 @@ List<Service> services = const [
     icon: Icons.local_play_rounded,
   ),
   Service(
-    title: "MoPSE",
-    icon: Icons.school,
+    title: "Births & Death",
+    icon: Icons.edit_document,
   ),
 ];
 

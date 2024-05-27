@@ -1,5 +1,5 @@
 import 'package:ecity/views/screens/home_screen/widgets/business_card.dart';
-import 'package:ecity/views/screens/home_screen/widgets/emergency_service_card.dart';
+import 'package:ecity/views/widgets/emergency_service_card.dart';
 import 'package:ecity/views/utils/theme/colors.dart';
 import 'package:ecity/views/utils/theme/spaces.dart';
 import 'package:flutter/material.dart';

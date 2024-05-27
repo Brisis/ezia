@@ -16,7 +16,7 @@ class SearchBox extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: CupertinoSearchTextField(
-        backgroundColor: CustomColors.kBackgroundColor,
+        backgroundColor: CustomColors.kContainerBackgroundColor,
         padding: const EdgeInsetsDirectional.fromSTEB(5.5, 12, 5.5, 12),
         placeholder: placeholder,
         prefixIcon: const Icon(

@@ -1,9 +1,12 @@
 import 'package:ecity/views/app/app_view.dart';
+import 'package:ecity/views/screens/business_screen/businesses_screen.dart';
+import 'package:ecity/views/screens/emergency_screen/emergency_screen.dart';
 import 'package:ecity/views/screens/home_screen/widgets/business_card.dart';
-import 'package:ecity/views/screens/home_screen/widgets/emergency_service_card.dart';
+import 'package:ecity/views/widgets/emergency_service_card.dart';
 import 'package:ecity/views/screens/home_screen/widgets/news_card.dart';
 import 'package:ecity/views/screens/home_screen/widgets/service_lg_card.dart';
 import 'package:ecity/views/screens/home_screen/widgets/service_sm_card.dart';
+import 'package:ecity/views/screens/news_screen/news_screen.dart';
 import 'package:ecity/views/screens/services_screen/service_screen.dart';
 import 'package:ecity/views/utils/theme/colors.dart';
 import 'package:ecity/views/utils/theme/spaces.dart';
@@ -274,7 +277,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, NewsScreen.route());
+                        },
                         child: Text(
                           "See all",
                           style:
@@ -325,7 +330,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, EmergencyScreen.route());
+                        },
                         child: Text(
                           "See all",
                           style:
@@ -388,7 +395,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, BusinessesScreen.route());
+                        },
                         child: Text(
                           "See all",
                           style:

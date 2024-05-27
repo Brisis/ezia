@@ -1,4 +1,6 @@
+import 'package:ecity/views/screens/profile_screen/screens/digital_id_screen.dart';
 import 'package:ecity/views/screens/profile_screen/widgets/document_card.dart';
+import 'package:ecity/views/screens/profile_screen/widgets/profile_menu_item.dart';
 import 'package:ecity/views/utils/theme/colors.dart';
 import 'package:ecity/views/utils/theme/spaces.dart';
 import 'package:flutter/cupertino.dart';
@@ -131,217 +133,49 @@ class PersonalInformationScreen extends StatelessWidget {
                 ),
             textAlign: TextAlign.center,
           ),
-          CustomSpaces.verticalSpace(height: 30),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.0.w),
-            child: Text(
-              "About Me",
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontWeight: FontWeight.w600,
-                    color: CustomColors.kBoldTextColor,
-                  ),
-            ),
+          CustomSpaces.verticalSpace(height: 15),
+          ProfileMenuItem(
+            title: "Digital Identity",
+            icon: Icons.qr_code,
+            onTap: () {
+              Navigator.push(context, DigitalIdScreen.route());
+            },
           ),
-          CustomSpaces.verticalSpace(),
-          ListTile(
+          CustomSpaces.verticalSpace(height: 10.h),
+          ProfileMenuItem(
+            title: "Name",
+            icon: Icons.person,
             onTap: () {},
-            tileColor: CustomColors.kContainerBackgroundColor,
-            leading: Icon(
-              Icons.person,
-              color: CustomColors.kIconColor,
-            ),
-            title: Text(
-              "Name",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall!
-                  .copyWith(fontWeight: FontWeight.w500),
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 18,
-              color: CustomColors.kIconColor,
-            ),
           ),
-          CustomSpaces.verticalSpace(),
-          ListTile(
+          CustomSpaces.verticalSpace(height: 10.h),
+          ProfileMenuItem(
+            title: "Birthday",
+            icon: Icons.calendar_month,
             onTap: () {},
-            tileColor: CustomColors.kContainerBackgroundColor,
-            leading: Icon(
-              Icons.calendar_month,
-              color: CustomColors.kIconColor,
-            ),
-            title: Text(
-              "Birthday",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall!
-                  .copyWith(fontWeight: FontWeight.w500),
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 18,
-              color: CustomColors.kIconColor,
-            ),
           ),
-          CustomSpaces.verticalSpace(),
-          ListTile(
+          CustomSpaces.verticalSpace(height: 10.h),
+          ProfileMenuItem(
+            title: "Gender",
+            icon: CupertinoIcons.person_2_fill,
             onTap: () {},
-            tileColor: CustomColors.kContainerBackgroundColor,
-            leading: Icon(
-              Icons.info,
-              color: CustomColors.kIconColor,
-            ),
-            title: Text(
-              "Bio",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall!
-                  .copyWith(fontWeight: FontWeight.w500),
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 18,
-              color: CustomColors.kIconColor,
-            ),
           ),
-          CustomSpaces.verticalSpace(),
-          ListTile(
+          CustomSpaces.verticalSpace(height: 10.h),
+          ProfileMenuItem(
+            title: "Phone",
+            icon: CupertinoIcons.phone,
             onTap: () {},
-            tileColor: CustomColors.kContainerBackgroundColor,
-            leading: Icon(
-              CupertinoIcons.person_2_fill,
-              color: CustomColors.kIconColor,
-            ),
-            title: Text(
-              "Gender",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall!
-                  .copyWith(fontWeight: FontWeight.w500),
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 18,
-              color: CustomColors.kIconColor,
-            ),
           ),
-          CustomSpaces.verticalSpace(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.0.w),
-            child: Text(
-              "Contact Information",
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontWeight: FontWeight.w600,
-                    color: CustomColors.kBoldTextColor,
-                  ),
-            ),
-          ),
-          CustomSpaces.verticalSpace(),
-          ListTile(
+          CustomSpaces.verticalSpace(height: 10.h),
+          ProfileMenuItem(
+            title: "Email",
+            icon: Icons.email,
             onTap: () {},
-            tileColor: CustomColors.kContainerBackgroundColor,
-            leading: Icon(
-              Icons.phone,
-              color: CustomColors.kIconColor,
-            ),
-            title: Text(
-              "Phone",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall!
-                  .copyWith(fontWeight: FontWeight.w500),
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 18,
-              color: CustomColors.kIconColor,
-            ),
           ),
-          CustomSpaces.verticalSpace(),
-          ListTile(
+          CustomSpaces.verticalSpace(height: 10.h),
+          ProfileMenuItem(
+            title: "Location",
+            icon: Icons.location_city,
             onTap: () {},
-            tileColor: CustomColors.kContainerBackgroundColor,
-            leading: Icon(
-              Icons.email,
-              color: CustomColors.kIconColor,
-            ),
-            title: Text(
-              "Email",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall!
-                  .copyWith(fontWeight: FontWeight.w500),
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 18,
-              color: CustomColors.kIconColor,
-            ),
-          ),
-          CustomSpaces.verticalSpace(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.0.w),
-            child: Text(
-              "Location",
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontWeight: FontWeight.w600,
-                    color: CustomColors.kBoldTextColor,
-                  ),
-            ),
-          ),
-          CustomSpaces.verticalSpace(),
-          ListTile(
-            onTap: () {},
-            tileColor: CustomColors.kContainerBackgroundColor,
-            leading: Icon(
-              Icons.location_city,
-              color: CustomColors.kIconColor,
-            ),
-            title: Text(
-              "Location",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall!
-                  .copyWith(fontWeight: FontWeight.w500),
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 18,
-              color: CustomColors.kIconColor,
-            ),
-          ),
-          CustomSpaces.verticalSpace(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.0.w),
-            child: Text(
-              "Interests",
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontWeight: FontWeight.w600,
-                    color: CustomColors.kBoldTextColor,
-                  ),
-            ),
-          ),
-          CustomSpaces.verticalSpace(),
-          ListTile(
-            onTap: () {},
-            tileColor: CustomColors.kContainerBackgroundColor,
-            leading: Icon(
-              Icons.thumb_up,
-              color: CustomColors.kIconColor,
-            ),
-            title: Text(
-              "What I Like",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall!
-                  .copyWith(fontWeight: FontWeight.w500),
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 18,
-              color: CustomColors.kIconColor,
-            ),
           ),
         ],
       ),

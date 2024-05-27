@@ -1,4 +1,4 @@
-import 'package:ecity/views/app/app_view.dart';
+import 'package:ecity/views/screens/auth/auth_register_screen.dart';
 import 'package:ecity/views/utils/theme/colors.dart';
 import 'package:ecity/views/utils/theme/spaces.dart';
 import 'package:ecity/views/widgets/custom_button.dart';
@@ -41,11 +41,6 @@ class WelcomeScreen extends StatelessWidget {
                       Colors.redAccent,
                       Colors.black.withOpacity(0.7),
                       Colors.white,
-                      // CustomColors.kDarkSurfaceColor.withOpacity(0.0),
-                      // CustomColors.kDarkSurfaceColor.withOpacity(0.3),
-                      // CustomColors.kDarkSurfaceColor.withOpacity(0.5),
-                      // CustomColors.kDarkSurfaceColor.withOpacity(0.8),
-                      // CustomColors.kDarkSurfaceColor,
                     ],
                   ),
                 ),
@@ -57,10 +52,6 @@ class WelcomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Text(
-                  //   "We are connecting every citizen of zimbabwe to a broad list of verified services, information & businesses through e-ZiA",
-                  //   style: Theme.of(context).textTheme.headlineSmall,
-                  // ),
                   Center(
                     child: Image.asset(
                       "assets/images/di.png",
@@ -80,9 +71,10 @@ class WelcomeScreen extends StatelessWidget {
                   CustomSpaces.verticalSpace(height: 30),
                   ButtonWidget(
                     onPressed: () {
-                      Navigator.push(context, AppView.route());
+                      Navigator.push(context,
+                          AuthRegisterScreen.route(fcmToken: "not available"));
                     },
-                    label: "Get Started",
+                    label: "GET STARTED",
                   ),
                 ],
               ),

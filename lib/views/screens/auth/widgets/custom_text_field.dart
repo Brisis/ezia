@@ -1,4 +1,6 @@
+import 'package:ecity/views/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
   final String label;
@@ -37,6 +39,19 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: label,
         suffixIcon: suffixIcon,
+        border: const OutlineInputBorder(),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            width: 2.0.w,
+            color: CustomColors.kBorderColor,
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            width: 2.0.w,
+            color: CustomColors.kLinkTextColor,
+          ),
+        ),
       ),
     );
   }

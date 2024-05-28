@@ -53,6 +53,13 @@ class _AuthRegisterScreenState extends State<AuthRegisterScreen> {
           padding: EdgeInsets.symmetric(horizontal: 15.0.w, vertical: 15.h),
           child: ListView(
             children: [
+              CustomSpaces.verticalSpace(height: 15.h),
+              Text(
+                "E-ZiA",
+                style: Theme.of(context).textTheme.displayLarge,
+                textAlign: TextAlign.center,
+              ),
+              CustomSpaces.verticalSpace(height: 15.h),
               Center(
                 child: Image.asset(
                   "assets/images/di.png",
@@ -69,11 +76,6 @@ class _AuthRegisterScreenState extends State<AuthRegisterScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Personal Details",
-                        style: Theme.of(context).textTheme.displayLarge,
-                      ),
-                      CustomSpaces.verticalSpace(height: 15.h),
                       CustomTextField(
                         label: "National ID",
                         controller: _idController,

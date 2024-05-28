@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
 
 class CustomCodeField extends StatelessWidget {
@@ -20,14 +21,20 @@ class CustomCodeField extends StatelessWidget {
           color: Color.fromRGBO(30, 60, 87, 1),
           fontWeight: FontWeight.w600),
       decoration: BoxDecoration(
-        border: Border.all(color: const Color.fromRGBO(234, 239, 243, 1)),
-        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: const Color.fromRGBO(234, 239, 243, 1),
+          width: 2.0.w,
+        ),
+        borderRadius: BorderRadius.circular(15.r),
       ),
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: Border.all(color: const Color.fromRGBO(114, 178, 238, 1)),
-      borderRadius: BorderRadius.circular(8),
+      border: Border.all(
+        color: const Color.fromRGBO(114, 178, 238, 1),
+        width: 2.0.w,
+      ),
+      borderRadius: BorderRadius.circular(15.r),
     );
 
     final submittedPinTheme = defaultPinTheme.copyWith(
